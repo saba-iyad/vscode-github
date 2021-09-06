@@ -11,24 +11,29 @@
 
     <script>
 // 1-...
-let object={a: 'somestring',
-  b: 42,
-  c: false,
-  d:["Saab", "Volvo", "BMW"]
-
-};
-//   console. log(object)
+ let object={a: 'somestring',b: 42,c: false,d:["Saab", "Volvo", "BMW"]};
+   console. log(object)
 // 2-...
-let text = "";
-for (let x in object) {
-  text += object[x];
+ let text = "";
+ for (let x in object) {
+ text += object[x];}
+ console. log(text)
+ //or
+//for( i=0;i<object.d.length;i++) console.log(object)
+//  3-...
+let arry=[object1={
+  name:'noor',
+  age:20
+   }
+    ,object2={
+     name:'zeze',
+     age:22
 }
-console. log(text)
-// 3-...
-object.push("50");
-console.log(object)
-        
-        
+]
+
+    arry.push(object3={name:'ali',age:21})
+    console.log(arry)
     </script>
+
 </body>
 </html>
