@@ -10,9 +10,24 @@
 <body>
 
     <script>
-        let name ='sama'
+// 1-...
+let object={a: 'somestring',
+  b: 42,
+  c: false,
+  d:["Saab", "Volvo", "BMW"]
+
+};
+//   console. log(object)
+// 2-...
+let text = "";
+for (let x in object) {
+  text += object[x];
+}
+console. log(text)
+// 3-...
+object.push("50");
+console.log(object)
         
-        console. log(name)
         
     </script>
 </body>
