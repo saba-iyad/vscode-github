@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+</head>
+
+<body>
+    <div id="app">
+
+
+
+        <!-- <h1>{{name}} </h1> -->
+        <!--  <button v-on:click="changname">consol log</button> -->
+        <!-- or- <button @click="changname">consol log</button> -->
+        
+        <!-- <input v-model:input="num1" type="text">
+        <input  v-model:input="num2" type="text">
+        <button v-on:click="plus">plus</button>
+         or  <button @click="plus">plus</button> -->
+        <!-- <h1>{{sum}} </h1>
+        
+        <script>
+    let app =new Vue({
+        el:'#app',
+        data:{ num1:0,num2:0, sum:0},
+       methods:{ 
+          plus(){ this.sum= parseInt(this.num1)+parseInt(this.num2)}
+        }
+        }
+    )
+</script>--> 
+
+
+
+<!--  3-- <input  v-model:input="hoppies"  type="text">
+<button @click="hopye"></button>
+<h1> {{hopy}} </h1> 
+
+<script>
+    let app =new Vue({
+        el:'#app',
+        data:{ hoppies:'',hopy:[] },
+       methods:{ 
+                hopye(){this.hopy.push(this.hoppies)}  }
+        }
+        
+    )
+</script>
+-->
+
+<h1> the name : {{ student.name}} </h1>
+<h1>the age: {{student.age}} </h1>
+
+
+
+
+
+
+
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+    let app =new Vue({
+        el:'#app',
+        data:{ student:{
+                        name:'sara', age:20,
+
+
+                            } },
+       methods:{   }
+        }
+        
+    )
+</script>
+
+
+    </body>
+    </html>
