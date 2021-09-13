@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    
+ </head>
+
+ <body class="bg-gray-200">
+    <div id="app">
+        <div class="flex justify-evenly m-6 px-6 py-6 ">
+        <input v-model:input ="numtask" v-on:keyup.enter="addcurrent"  class="  flex flex justify-evenly shadow-2xl border border-purple-600  w-5/12  rounded-lg  py-2 px-3  ">
+        <input v-model:input ="num" type="number"  min="0" max="100" class="  flex flex justify-evenly shadow-2xl border border-purple-600  w-1/12  rounded-lg  py-2 px-3  ">    
+        
+        </div>
+        <div class="flex justify-end pr-60 ">
+        <button  @click="addnum" class="px-3 border-black  bg-yellow-400 text-lg shadow-lg rounded-lg">add</button>
+        </div>
+        <div  class="px-60 py-5">
+         <div class="flex justify-between">
+          <p class="m-6 "> item name </p>
+          <p class="m-6 "> item qty </p>
+         </div>
+        <div    class="  m-6 grid grid-cols divide-y divide-purple-600 ..."> 
+            
+                
+            
+                <div   class="flex justify-between">
+                     <h1 v-for="current in current" >{{current}} </h1>
+                     
+                     <h1 v-for="arraynum in arraynum" > {{arraynum}} </h1>
+                     
+                    </div>
+                
+            
+
+            <hr>
+            
+        </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+    <script>
+        let app =new Vue({
+           
+           el:'#app',
+           data:{ 
+               numtask:'',
+               num:'',
+               current:[],
+               arraynum:[],
+               
+               
+                },
+           methods:{  
+                   
+               
+                addcurrent(){this.current.push(this.numtask)},
+               
+                addnum(){ this.arraynum.push(this.num)}
+   
+                  }
+       })
+   </script>    
+ </body>
+</html>

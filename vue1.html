@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    
+</head>
+
+<body class="bg-gray-200">
+    <div id="app">
+        <div class="flex justify-evenly px-6 py-6 ">
+        <input v-model:input ="numtask" v-on:keyup.enter="addcurrent" placeholder="what are your tasks for today?" class="  flex flex justify-evenly shadow-2xl border border-purple-600  w-5/12  rounded-lg  py-2 px-3  ">
+        </div>
+        <div  class="px-60 py-5">
+        <p class="m-8 "> current tasks </p>
+        <div v-for="current in current" class="   flex justify-between m-8  border border-purple-600  shadow-2xl w-full bg-white  rounded-lg  py-3 px-3  "> 
+            {{current}} 
+            <div class="flex   justify-end  ">
+             <button  @click="addlater" class="px-3 text-lg hover:text-gray-100  hover:bg-blue-400 hover:shadow-lg hover:border hover: rounded-lg">later</button>
+             <button    class="px-3  text-lg hover:text-gray-100  hover:bg-red-400 hover:shadow-lg hover:border hover: rounded-lg ">dlet</button>
+            </div>
+        </div>
+        </div>
+        <div class="px-60 py-5">
+            <p class="m-8 " > later tasks</p>
+              <div v-for="later of later" class="  flex justify-between m-8  border border-green-400 shadow-2xl w-full bg-white  rounded-lg  py-3 px-3  "> 
+                 {{later}} 
+             <div class="flex justify-end px-3 ">
+             <button  class="px-3 text-lg hover:text-gray-100  hover:bg-green-400 hover:shadow-lg hover:border hover: rounded-lg">current</button>
+             <button  class="px-3 text-lg hover:text-gray-100  hover:bg-red-400 hover:shadow-lg hover:border hover: rounded-lg">dlet</button>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+     let app =new Vue({
+        
+        el:'#app',
+        data:{ 
+            numtask:'',
+            current:[],
+            later:[],
+             },
+        methods:{  
+                
+            
+             addcurrent(){this.current.push(this.numtask)},
+             addlater(){this.later.push(this.current) }
+            
+
+               }
+    })
+</script>
+
+
+    </body>
+    </html>

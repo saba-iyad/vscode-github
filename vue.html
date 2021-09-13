@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>hi</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     
 </head>
 
@@ -36,47 +38,62 @@
 
 
 
-<!--  3-- <input  v-model:input="hoppies"  type="text">
-<button @click="hopye"></button>
-<h1> {{hopy}} </h1> 
+ <input  v-model:input="hoppies" class="border border-purple-600 px-3 py-6" type="text">
+<button @click="hopye" class="border border-purple-600 ">go</button>
+<p v-for="hopy in hopy"> {{hopy}} </p>
 
-<script>
-    let app =new Vue({
-        el:'#app',
-        data:{ hoppies:'',hopy:[] },
-       methods:{ 
-                hopye(){this.hopy.push(this.hoppies)}  }
-        }
-        
-    )
-</script>
--->
+ 
 
-<h1> the name : {{ student.name}} </h1>
-<h1>the age: {{student.age}} </h1>
-
-
-
-
-
-
-
-        </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-
+<!-- <h1> the name : {{ student.name}} </h1>
+<h1>the age: {{student.age}} </h1> 
 <script>
     let app =new Vue({
         el:'#app',
         data:{ student:{
-                        name:'sara', age:20,
-
-
-                            } },
+                        name:'sara', age:20, } },
        methods:{   }
         }
         
     )
+</script>-->
+
+<!-- <h1 v-shoo="greeting==true"  > hi</h1> -->
+<!-- <h1 v-if="greeting"  > hi</h1>
+<h1 v-else="greeting"  > no</h1>
+<input v-model="name" >
+<h1> {{name}} </h1>
+<button  >go</button>
+let app =new Vue({
+    el:'#app',
+    data:{greeting:1,
+                    name:"" },
+   methods:{   }
+    }) -->
+
+ <!-- <a  @click="activ ='sacshin1'"  class="activ =='sacshin1'? 'bg-blue-100' :'bg-red-100' "  >sacshin 1</a>
+ <a  @click="activ ='sacshin2'"  class="rounded-full py-3 px-6 bg-blue-100" >sacshin 2</a>
+
+<p v-if="activ =='sacshin1'"> sacshin 1Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti eligendi soluta quis voluptas reprehenderit aperiam, velit veniam est cupiditate sint! Expedita laboriosam id velit et magnam nobis alias delectus molestias?</p>
+
+<p v-if="activ =='sacshin2'"> sacshin 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti eligendi soluta quis voluptas reprehenderit aperiam, velit veniam est cupiditate sint! Expedita laboriosam id velit et magnam nobis alias delectus molestias?</p>
+        </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script>
+     let app =new Vue({
+        el:'#app',
+        data:{ hoppies:'',hopy:[] },
+       methods:{ 
+                hopye(){this.hopy.push(this.hoppies)}  }
+        })
+    //  let app =new Vue({
+        
+    //     el:'#app',
+    //     data:{ 
+    //     activ:'',
+    //              },
+    //     methods:{   }   
 </script>
 
 
