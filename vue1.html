@@ -17,20 +17,24 @@
         </div>
         <div  v-if="current.length > 0" class="px-60 py-5">
         <h1    class="m-8  text-xl "> current tasks </h1>
+
         <div v-for="(numtask,index) in current" class="   flex justify-between m-8  border border-purple-600  shadow-2xl w-full bg-white  rounded-lg  py-3 px-3  "> 
-            {{numtask}} 
+            <div>
+            {{numtask}}
+        </div> 
+
             <div class="flex   justify-end  ">
              <button  @click="addlater(index)"  class="px-3 text-lg hover:text-gray-100  hover:bg-blue-400 hover:shadow-lg hover:border hover: rounded-lg">later</button>
-             <button      @click="deleteCurrent(index)"       class="px-3  text-lg hover:text-gray-100  hover:bg-red-400 hover:shadow-lg hover:border hover: rounded-lg ">dlet</button>
+             <button   @click="deleteCurrent(index)"       class="px-3  text-lg hover:text-gray-100  hover:bg-red-400 hover:shadow-lg hover:border hover: rounded-lg ">dlet</button>
             </div>
         </div>
         </div>
         <div v-if="later.length > 0" class="px-60 py-5">
-            <h1 v-if="" class="m-8  text-xl " > later tasks</h1>
-              <div v-for="(numtask,index) of later" class="  flex justify-between m-8  border border-green-400 shadow-2xl w-full bg-white  rounded-lg  py-3 px-3  "> 
+            <h1  class="m-8  text-xl " > later tasks</h1>
+              <div v-for="(numtask,index) in later" class="  flex justify-between m-8  border border-green-400 shadow-2xl w-full bg-white  rounded-lg  py-3 px-3  "> 
                  {{numtask}} 
              <div class="flex justify-end px-3 ">
-             <button  @click="addcurrents" class="px-3 text-lg hover:text-gray-100  hover:bg-green-400 hover:shadow-lg hover:border hover: rounded-lg">current</button>
+             <button  @click="addcurrents(numtask) " class="px-3 text-lg hover:text-gray-100  hover:bg-green-400 hover:shadow-lg hover:border hover: rounded-lg">current</button>
              <button  @click="deleteleter(index)" class="px-3 text-lg hover:text-gray-100  hover:bg-red-400 hover:shadow-lg hover:border hover: rounded-lg">dlet</button>
             </div>
         </div>  
@@ -54,11 +58,16 @@
             
              addcurrent(){this.current.push(this.numtask)},
              deleteCurrent(index) {this.current.splice(index, 1)},
+
+
              addlater(numtask){this.later.push(this.numtask)
                        let index = this.current.indexOf(numtask)
                        this.current.splice(index, 1)
             
                         },
+
+                       
+
              addcurrents(numtask){this.current.push(this.numtask)
                        let index = this.later.indexOf(numtask)
                        this.later.splice(index, 1)
